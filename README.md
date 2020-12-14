@@ -2,7 +2,7 @@
 
 0. Get access to an ocp cluster or use crc.
 1. clone https://github.com/openshift-knative/serverless-operator and run `make install-all`
-2. run: `deploy_all.sh`
+2. run: `deploy_sources.sh --apply`
 3. run: `crc console` and check Knative dashboards
 4. For the kafka sources create some load with:
 ```
