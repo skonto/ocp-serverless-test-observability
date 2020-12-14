@@ -1,0 +1,15 @@
+apiVersion: eventing.knative.dev/v1beta1
+kind: Trigger
+metadata:
+  name: testevents-trigger
+spec:
+  broker: default
+  filter:
+    attributes:
+  #    type: dev.knative.apiserver.resource.update
+  subscriber:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: event-display
+
