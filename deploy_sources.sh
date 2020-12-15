@@ -9,6 +9,7 @@ manage_namespaces () {
 
 doop () {
   local op=$1
+  kubectl $op -f $(dirname "${BASH_SOURCE[0]}")/topic.yaml
   for i in {1..10}
   do
     if [ "$op" = "apply" ]; then
